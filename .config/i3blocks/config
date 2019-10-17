@@ -1,0 +1,122 @@
+#  _ _____       _     _            _                           __ _
+# (_)___ /      | |__ | | ___   ___| | _____    ___ ___  _ __  / _(_) __ _
+# | | |_ \ _____| '_ \| |/ _ \ / __| |/ / __|  / __/ _ \| '_ \| |_| |/ _` |
+# | |___) |_____| |_) | | (_) | (__|   <\__ \ | (_| (_) | | | |  _| | (_| |
+# |_|____/      |_.__/|_|\___/ \___|_|\_\___/  \___\___/|_| |_|_| |_|\__, |
+#                                                                    |___/
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=/usr/share/i3blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+[cmus]
+command=~/projects/my-scripts/cmus.sh
+interval=2
+color=#5ae67d
+
+#[deadbeef]
+#command=deadbeef --nowplaying-tf "%artist% - %title%"
+#interval=2
+#color=#5ae67d
+
+
+[ping]
+command=~/projects/my-scripts/ping.py
+interval=2
+label=PING
+
+
+[bandwidth]
+interval=5
+
+
+[memory]
+label=MEM
+separator=false
+interval=10
+
+
+[mem_percent]
+interval=10
+command=~/projects/my-scripts/mem_used.py
+
+
+[cpu_usage]
+label=CPU
+interval=2
+min_width=CPU: 100.00%
+
+
+#[iface]
+#color=#00FF00
+#interval=10
+#separator=false
+
+
+#[wifi]
+#interval=1
+#separator=false
+
+
+[bat]
+command=~/projects/i3blocks-contrib/batterybar/batterybar
+label=⚡
+interval=5
+markup=pango
+min_width=bat: ■■■■■
+# Discharging colors low to high
+#C1=#FF0027
+#C2=#FF3B05
+#C3=#FFB923
+#C4=#FFD000
+#C5=#E4FF00
+#C6=#ADFF00
+#C7=#6DFF00
+#C8=#10BA00
+#CHARGING_COLOR=#00AFE3
+#FULL_COLOR=#FFFFFF
+#AC_COLOR=#535353
+
+[volume]
+command=amixer -D pulse get Master | grep 'Right:' | awk -F'[][]' '{ print $2  }'
+color=#03fce8
+interval=once
+label=♪
+signal=11
+
+
+[time]
+command=~/projects/my-scripts/rofi-calendar.sh
+interval=5
+
+#[kblayout]
+#label=⌨
+#command=~/progs/xkblayout-state print '%s'; echo " "
+#interval=2
+#color=#ffffff
+#signal=10
