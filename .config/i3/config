@@ -18,6 +18,7 @@
 exec_always xrdb ~/.Xresources
 set_from_resource $monitor1 i3wm.Monitors.monitor1 'unknown-monitor-1'
 set_from_resource $monitor2 i3wm.Monitors.monitor2 'unknown-monitor-2'
+exec --no-startup-id xrandr --output $monitor2 --right-of $monitor1 --auto
 
 set $mod Mod4
 
