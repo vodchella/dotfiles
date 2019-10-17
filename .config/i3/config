@@ -213,14 +213,14 @@ bar {
         }
 }
 
-bindsym $mod+Escape exec ~/projects/my-scripts/lock.sh ~/Изображения/i3/skull.png
+bindsym $mod+Escape exec ~/.local/bin/lock.sh ~/Изображения/i3/skull.png
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id ~/projects/my-scripts/inc_volume.sh 5%+
-bindsym XF86AudioLowerVolume exec --no-startup-id ~/projects/my-scripts/inc_volume.sh 5%-
-bindsym $mod+x exec --no-startup-id ~/projects/my-scripts/inc_volume.sh 5%+
-bindsym $mod+z exec --no-startup-id ~/projects/my-scripts/inc_volume.sh 5%-
-bindsym $mod+s exec ~/projects/my-scripts/edit-settings.sh
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.local/bin/inc_volume.sh 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/.local/bin/inc_volume.sh 5%-
+bindsym $mod+x exec --no-startup-id ~/.local/bin/inc_volume.sh 5%+
+bindsym $mod+z exec --no-startup-id ~/.local/bin/inc_volume.sh 5%-
+bindsym $mod+s exec ~/.local/bin/edit-settings.sh
 
 # CMUS control
 mode "cmus" {

@@ -35,7 +35,7 @@ separator_block_width=15
 markup=none
 
 [cmus]
-command=~/projects/my-scripts/cmus.sh
+command=~/.local/bin/cmus.sh
 interval=2
 color=#5ae67d
 
@@ -46,7 +46,7 @@ color=#5ae67d
 
 
 [ping]
-command=~/projects/my-scripts/ping.py
+command=~/.local/bin/ping.py
 interval=2
 label=PING
 
@@ -63,7 +63,7 @@ interval=10
 
 [mem_percent]
 interval=10
-command=~/projects/my-scripts/mem_used.py
+command=~/.local/bin/mem_used.py
 
 
 [cpu_usage]
@@ -111,7 +111,7 @@ signal=11
 
 
 [time]
-command=~/projects/my-scripts/rofi-calendar.sh
+command=~/.local/bin/rofi-calendar.sh
 interval=5
 
 #[kblayout]
