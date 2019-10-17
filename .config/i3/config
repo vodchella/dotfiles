@@ -235,7 +235,7 @@ bindsym $mod+c mode "cmus"
 
 #exec_always "setxkbmap -layout us,ru"
 #exec_always "setxkbmap -option -option 'grp:alt_space_toggle'"
-exec_always "setxkbmap -option"
+exec_always "setxkbmap -option -option ctrl:swapcaps"
 
 exec tilix
 exec ibus-daemon --xim
