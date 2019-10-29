@@ -240,6 +240,7 @@ exec_always "setxkbmap -option"
 
 exec tilix
 exec ibus-daemon --xim
+exec --no-startup-id udiskie -tc ~/.config/udiskie/config.yml
 exec_always "killall -q compton; compton -f"
 exec_always feh --bg-scale ~/Изображения/i3/w1.png
 
