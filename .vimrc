@@ -30,11 +30,11 @@ colorscheme gruvbox
 set background=dark
 let g:airline_theme='base16'
 let g:airline_enable_fugitive=1
+let g:airline_powerline_fonts = 1
 
 let NERDTreeShowHidden=1
 let g:indent_guides_enable_on_vim_startup = 1
 let g:python_highlight_all = 1
-let g:airline_powerline_fonts = 1
 
 set number relativenumber
 set nu rnu
@@ -59,3 +59,7 @@ map <C-N> :NERDTreeToggle<CR>
 map <leader>l :set syntax=log<CR>
 map <leader>w :set nowrap<CR>
 map <leader>i :IndentGuidesToggle<CR>
+
+
+autocmd InsertEnter * set cul
+autocmd InsertLeave * set nocul
