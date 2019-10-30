@@ -6,7 +6,11 @@
 #cell_width_scale = 1.0
 #clickable_url = true
 #dynamic_title = true
-font = Hack Nerd Font Mono Regular 12
+
+#font = Hack Nerd Font Mono Regular 12
+#font = VictorMono Nerd Font Mono Medium 12
+font = TerminessTTF Nerd Font Mono Medium 14
+
 fullscreen = false
 #icon_name = terminal
 #mouse_autohide = false
