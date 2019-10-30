@@ -24,6 +24,9 @@ Plug 'vim-python/python-syntax'
 " Color shemes
 Plug 'morhetz/gruvbox'
 
+" Icons
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 
 colorscheme gruvbox
