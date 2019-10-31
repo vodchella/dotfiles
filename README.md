@@ -16,5 +16,6 @@ Used software
 - [scrot](https://github.com/dreamer/scrot)
 - [termite](https://github.com/thestinger/termite)
 - [udiskie](https://github.com/coldfix/udiskie)
+- [unimatrix](https://github.com/will8211/unimatrix)
 - [vim](https://github.com/vim/vim)
   - [vim-plug](https://github.com/junegunn/vim-plug)
