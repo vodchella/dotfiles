@@ -250,7 +250,6 @@ assign [class="Termite"] $workspace1
 assign [class="jetbrains-idea"] $workspace2
 assign [class="jetbrains-datagrip"] $workspace3
 assign [class="Pgadmin3"] $workspace3
-assign [class="jetbrains-datagrip"] $workspace3
 assign [class="jetbrains-pycharm"] $workspace4
 assign [class="Google-chrome"] $workspace9
 assign [class="Deadbeef"] $workspace10

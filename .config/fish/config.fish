@@ -27,7 +27,7 @@ set -g -x PAGER most
 alias cd..='cd ..'
 alias ls='lsd -F'
 alias ssh_bot_srv='ssh -p 17120 root@bot-srv'
-alias ssh_twr_srv='ssh -p 17120 root@twr-srv'
+alias ssh_twr_srv='ssh -p 17120 root@arms.kz'
 alias mount_bot_srv='sshfs -p 17120 root@bot-srv:/ /mnt/bot-srv'
 alias r='ranger --choosedir=$HOME/.config/ranger/.rangerdir; cd (cat $HOME/.config/ranger/.rangerdir)'
 alias m='unimatrix -l "so"'
