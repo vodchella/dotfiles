@@ -24,6 +24,12 @@ fish_ssh_agent
 set -g -x fish_greeting 'Привет, Максимка!'
 set -g -x PAGER most
 
+set -g -x ANDROID_HOME $HOME/Android/Sdk
+set -g -x PATH $PATH $ANDROID_HOME/emulator
+set -g -x PATH $PATH $ANDROID_HOME/tools
+set -g -x PATH $PATH $ANDROID_HOME/tools/bin
+set -g -x PATH $PATH $ANDROID_HOME/platform-tools
+
 alias cd..='cd ..'
 alias ls='lsd -F'
 alias ssh_bot_srv='ssh -p 17120 root@bot-srv'
