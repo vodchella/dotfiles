@@ -1,6 +1,16 @@
 My dotfiles
 ===========
 
+Installation
+-------------
+* Clone this repository with `--bare` option
+* Add alias to shell `cfg='git --git-dir=$HOME/projects/dotfiles/ --work-tree=$HOME'`
+* Remove all files from disk which Git wants to overwrite
+* Checkout the actual content from the bare repository `cfg checkout`
+* Set the flag showUntrackedFiles to no on this specific (local) repository `config --local status.showUntrackedFiles no`
+
+More information: https://www.atlassian.com/git/tutorials/dotfiles
+
 Used software
 -------------
 
