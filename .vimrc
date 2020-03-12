@@ -6,7 +6,7 @@
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeTabsToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -17,6 +17,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'dag/vim-fish'
 Plug 'dzeban/vim-log-syntax'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'jistr/vim-nerdtree-tabs'
 
 " Programming languages
 Plug 'vim-python/python-syntax'
@@ -36,6 +37,8 @@ let g:airline_enable_fugitive=1
 let g:airline_powerline_fonts = 1
 
 let NERDTreeShowHidden=1
+let NERDTreeMapOpenInTab='<ENTER>'
+
 let g:indent_guides_enable_on_vim_startup = 1
 let g:python_highlight_all = 1
 
@@ -58,11 +61,13 @@ syntax on
 
 map <Space> <leader>
 
-map <C-N> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeTabsToggle<CR>
 map <leader>l :set syntax=log<CR>
 map <leader>w :set nowrap<CR>
 map <leader>i :IndentGuidesToggle<CR>
 
+nnoremap <C-l> gt
+nnoremap <C-h> gT
 
 autocmd InsertEnter * set cul
 autocmd InsertLeave * set nocul
