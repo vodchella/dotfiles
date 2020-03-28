@@ -215,7 +215,7 @@ bar {
         }
 }
 
-bindsym $mod+Escape exec ~/.local/bin/lock.sh ~/Изображения/i3/skull.png
+bindsym $mod+Escape exec ~/.local/bin/lock.sh /usr/share/backgrounds/skull.png
 
 # Pulse Audio controls
 #bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.local/bin/inc_volume.sh 5%+
