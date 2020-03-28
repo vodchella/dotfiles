@@ -34,10 +34,22 @@ command=/usr/share/i3blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
-[cmus]
-command=~/.local/bin/cmus.sh
-interval=2
-color=#5ae67d
+#[cmus]
+#command=~/.local/bin/cmus.sh
+#interval=2
+#color=#5ae67d
+
+
+[arch-update]
+markup=pango
+interval=3600
+QUIET=false
+WATCH=^linux.* ^pacman.*
+BASE_COLOR=#5fff5f
+UPDATE_COLOR=#FFFF85
+AUR=true
+LABEL= 
+
 
 #[deadbeef]
 #command=deadbeef --nowplaying-tf "%artist% - %title%"
@@ -56,18 +68,18 @@ interval=5
 
 
 [memory]
-label=MEM
-separator=false
+label=MEM 
+separator=true
 interval=10
 
 
-[mem_percent]
-interval=10
-command=~/.local/bin/mem_used.sh
+#[mem_percent]
+#interval=10
+#command=~/.local/bin/mem_used.sh
 
 
 [cpu_usage]
-label=CPU
+label=CPU 
 interval=2
 min_width=CPU: 100.00%
 
@@ -83,9 +95,8 @@ min_width=CPU: 100.00%
 #separator=false
 
 
-[bat]
-command=~/.local/bin/batterybar
-label=⚡
+[batterybar]
+label=⚡ 
 interval=5
 markup=pango
 min_width=bat: ■■■■■
