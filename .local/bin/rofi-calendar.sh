@@ -24,7 +24,7 @@ if [[ "$BLOCK_BUTTON" -eq 1 ]]; then
 						-yoffset +5 \
 						-theme '~/.local/share/rofi/themes/Arc-Dark.rasi' \
 						-eh 1 \
-						-width -22 \
+						-width -23 \
 						-no-custom \
 						-lines 7 \
 						-p "" > /dev/null
