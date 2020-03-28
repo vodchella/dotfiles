@@ -48,7 +48,7 @@ color=#5ae67d
 [ping]
 command=~/.local/bin/ping.py
 interval=2
-label=PING
+label=PING 
 
 
 [bandwidth]

@@ -4,9 +4,9 @@
 import sys
 import platform
 
-is_ubuntu = len([x for x in platform.os.uname() if "ubuntu" in x.lower()]) > 0
+is_ubuntu = len([x for x in platform.os.uname() if "linux" in x.lower()]) > 0
 if not is_ubuntu:
-    sys.stderr.write("Only Ubuntu Linux supported\n")
+    sys.stderr.write("Only Linux supported\n")
     sys.exit(1)
 
 try:
