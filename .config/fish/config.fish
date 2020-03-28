@@ -31,7 +31,7 @@ set -g -x PATH $PATH $ANDROID_HOME/tools/bin
 set -g -x PATH $PATH $ANDROID_HOME/platform-tools
 
 alias cd..='cd ..'
-alias ls='lsd -F'
+#alias ls='lsd -F'
 alias ssh_bot_srv='ssh -p 17120 root@bot-srv'
 alias ssh_twr_srv='ssh -p 17120 root@arms.kz'
 alias mount_bot_srv='sshfs -p 17120 root@bot-srv:/ /mnt/bot-srv'
