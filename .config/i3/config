@@ -15,7 +15,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-exec_always xrdb ~/.Xresources
+exec_always --no-startup-id xrdb ~/.Xresources
 set_from_resource $monitor1 i3wm.Monitors.monitor1 'unknown-monitor-1'
 set_from_resource $monitor2 i3wm.Monitors.monitor2 'unknown-monitor-2'
 exec --no-startup-id xrandr --output $monitor2 --right-of $monitor1 --auto
@@ -234,13 +234,14 @@ mode "cmus" {
 }
 bindsym $mod+c mode "cmus"
 
-exec_always "setxkbmap -option"
+exec_always --no-startup-id "setxkbmap -option"
 exec termite
+exec i3-msg 'workspace ' $workspace1
 #exec ibus-daemon --xim
-exec ibus-daemon -drx
+exec --no-startup-id ibus-daemon -drx
 exec --no-startup-id udiskie -tc ~/.config/udiskie/config.yml
-exec_always "killall -q compton; compton -f"
-exec_always feh --bg-scale /usr/share/backgrounds/current.jpg
+exec_always --no-startup-id "killall -q compton; compton -f"
+exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/current.jpg
 
 assign [class="Google-chrome"] $workspace0
 assign [class="Tilix"] $workspace1
