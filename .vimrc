@@ -46,9 +46,10 @@ set number relativenumber
 set nu rnu
 set listchars=tab:··
 set list
-set tabstop=2
+set tabstop=4
 set shiftwidth=4
 set smarttab
+set expandtab
 
 set hlsearch
 set incsearch
