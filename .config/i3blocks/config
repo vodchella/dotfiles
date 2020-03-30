@@ -114,8 +114,7 @@ min_width=bat: ■■■■■
 #AC_COLOR=#535353
 
 [volume]
-#command=amixer -D pulse get Master | grep 'Right:' | awk -F'[][]' '{ print $2  }'
-command=pamixer --get-volume
+command=~/.local/bin/get_volume.sh
 color=#03fce8
 interval=once
 label=♪ 

@@ -222,10 +222,10 @@ bindsym $mod+Escape exec ~/.local/bin/lock.sh /usr/share/backgrounds/skull.png
 #bindsym XF86AudioLowerVolume exec --no-startup-id ~/.local/bin/inc_volume.sh 5%-
 #bindsym $mod+x exec --no-startup-id ~/.local/bin/inc_volume.sh 5%+
 #bindsym $mod+z exec --no-startup-id ~/.local/bin/inc_volume.sh 5%-
-bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.local/bin/inc_volume.sh
-bindsym XF86AudioLowerVolume exec --no-startup-id ~/.local/bin/dec_volume.sh
-bindsym $mod+x exec --no-startup-id ~/.local/bin/inc_volume.sh
-bindsym $mod+z exec --no-startup-id ~/.local/bin/dec_volume.sh
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.local/bin/inc_volume.sh 5 +
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/.local/bin/inc_volume.sh 5 -
+bindsym $mod+x exec --no-startup-id ~/.local/bin/inc_volume.sh 5 +
+bindsym $mod+z exec --no-startup-id ~/.local/bin/inc_volume.sh 5 -
 bindsym $mod+s exec ~/.local/bin/edit-settings.sh
 
 # CMUS control
