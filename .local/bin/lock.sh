@@ -5,7 +5,14 @@ if [ "$LAYOUT" != "us"  ]; then
     i3-nagbar -t warning -m 'Не стоит блокировать экран при русской раскладке'
 else
     HEIGHT=$(xrandr | grep \* | awk '{print $1}' | cut -d "x" -f1)
-    CIRCLE_TOP=$((HEIGHT-700))
+    PADDING=0
+    if [ "$HEIGHT" == "1920" ]; then
+        PADDING=40
+    fi
+    if [ "$HEIGHT" == "1366" ]; then
+        PADDING=10
+    fi
+    CIRCLE_TOP=$((HEIGHT/2+PADDING))
     scrot /tmp/screen.png
     convert /tmp/screen.png -filter Gaussian -blur 0x8 /tmp/screen.png
     [[ -f $1  ]] && convert /tmp/screen.png -font 'Karumbi' -pointsize 180 -fill white -gravity center -annotate +60+280 "Achtung! Angry Max!" $1 -gravity center -composite -matte /tmp/screen.png
