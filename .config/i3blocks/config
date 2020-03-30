@@ -58,7 +58,7 @@ LABEL=
 
 
 [ping]
-command=~/.local/bin/ping.py
+command=~/.local/bin/ping.sh
 interval=2
 label=PING 
 
