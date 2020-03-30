@@ -218,15 +218,10 @@ bar {
 bindsym $mod+Escape exec ~/.local/bin/lock.sh /usr/share/backgrounds/skull.png
 
 # Pulse Audio controls
-#bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.local/bin/inc_volume.sh 5%+
-#bindsym XF86AudioLowerVolume exec --no-startup-id ~/.local/bin/inc_volume.sh 5%-
-#bindsym $mod+x exec --no-startup-id ~/.local/bin/inc_volume.sh 5%+
-#bindsym $mod+z exec --no-startup-id ~/.local/bin/inc_volume.sh 5%-
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.local/bin/inc_volume.sh 5 +
 bindsym XF86AudioLowerVolume exec --no-startup-id ~/.local/bin/inc_volume.sh 5 -
 bindsym $mod+x exec --no-startup-id ~/.local/bin/inc_volume.sh 5 +
 bindsym $mod+z exec --no-startup-id ~/.local/bin/inc_volume.sh 5 -
-bindsym $mod+s exec ~/.local/bin/edit-settings.sh
 
 # CMUS control
 mode "cmus" {
@@ -239,10 +234,7 @@ mode "cmus" {
 }
 bindsym $mod+c mode "cmus"
 
-#exec_always "setxkbmap -layout us,ru"
-#exec_always "setxkbmap -option -option 'grp:alt_space_toggle'"
 exec_always "setxkbmap -option"
-
 exec termite
 #exec ibus-daemon --xim
 exec ibus-daemon -drx
