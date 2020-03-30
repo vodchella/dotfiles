@@ -1,11 +1,11 @@
 #!/bin/bash
 
-AMIXER=$(which amixer)
-if [ -x $AMIXER  ]; then
+AMIXER=$(which amixer 2> /dev/null)
+if [ -x "$AMIXER"  ]; then
     amixer -D pulse get Master | grep 'Right:' | awk -F'[][]' '{ print $2  }'
 else
-    PAMIXER=$(which pamixer)
-    if [ -x $PAMIXER  ]; then
+    PAMIXER=$(which pamixer 2> /dev/null)
+    if [ -x "$PAMIXER"  ]; then
         pamixer --get-volume
     fi
 fi
