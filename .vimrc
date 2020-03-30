@@ -18,6 +18,7 @@ Plug 'dag/vim-fish'
 Plug 'dzeban/vim-log-syntax'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'ap/vim-css-color'
 
 " Programming languages
 Plug 'vim-python/python-syntax'
