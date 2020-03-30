@@ -39,5 +39,6 @@ alias r='ranger --choosedir=$HOME/.config/ranger/.rangerdir; cd (cat $HOME/.conf
 alias m='unimatrix -l "so"'
 alias notes='terminal_velocity'
 alias cfg='git --git-dir=$HOME/projects/dotfiles/ --work-tree=$HOME'
+alias pacman_cleanup='sudo pacman -Rsn (pacman -Qdtq)'
 
 unimatrix -l 'so'
