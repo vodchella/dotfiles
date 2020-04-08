@@ -15,11 +15,13 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# Setup monitors
 exec_always --no-startup-id xrdb ~/.Xresources
 set_from_resource $monitor1 i3wm.Monitors.monitor1 'unknown-monitor-1'
 set_from_resource $monitor2 i3wm.Monitors.monitor2 'unknown-monitor-2'
 exec --no-startup-id xrandr --output $monitor2 --right-of $monitor1 --auto
 
+# Set modkey to super
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -39,6 +41,29 @@ font pango:monospace 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+# Workspaces
+set $workspace0  "0: Chrome"
+set $workspace1  "1: Terinal"
+set $workspace2  "2: Idea"
+set $workspace3  "3: Databases"
+set $workspace4  "4: PyCharm"
+set $workspace5  "5."
+set $workspace6  "6."
+set $workspace7  "7."
+set $workspace8  "8."
+set $workspace9  "9."
+
+workspace $workspace0  output $monitor1
+workspace $workspace1  output $monitor1
+workspace $workspace2  output $monitor1
+workspace $workspace3  output $monitor1
+workspace $workspace4  output $monitor1
+workspace $workspace5  output $monitor1
+workspace $workspace6  output $monitor1
+workspace $workspace7  output $monitor1
+workspace $workspace8  output $monitor2
+workspace $workspace9  output $monitor2
 
 # start a terminal
 bindsym $mod+Return exec termite
@@ -111,33 +136,6 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
-
-set $workspace0  "0: Chrome"
-set $workspace1  "1: Terinal"
-set $workspace2  "2: Idea"
-set $workspace3  "3: Databases"
-set $workspace4  "4: PyCharm"
-set $workspace5  "5."
-set $workspace6  "6."
-set $workspace7  "7."
-set $workspace8  "8."
-set $workspace9  "9."
-
-workspace $workspace0  output $monitor1
-workspace $workspace1  output $monitor1
-workspace $workspace2  output $monitor1
-workspace $workspace3  output $monitor1
-workspace $workspace4  output $monitor1
-workspace $workspace5  output $monitor1
-workspace $workspace6  output $monitor1
-workspace $workspace7  output $monitor1
-workspace $workspace8  output $monitor2
-workspace $workspace9  output $monitor2
 
 # switch to workspace
 bindsym $mod+grave workspace $workspace0
@@ -167,17 +165,22 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# System menu
+bindsym $mod+Escape exec ~/.local/bin/sysmenu.sh
+
+# Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.local/bin/inc_volume.sh 5 +
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/.local/bin/inc_volume.sh 5 -
+bindsym $mod+x exec --no-startup-id ~/.local/bin/inc_volume.sh 5 +
+bindsym $mod+z exec --no-startup-id ~/.local/bin/inc_volume.sh 5 -
+
+# Modes
+bindsym $mod+c mode "cmus"
+bindsym $mod+r mode "resize"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym h resize shrink width 5 px or 5 ppt
         bindsym j resize grow height 5 px or 5 ppt
         bindsym k resize shrink height 5 px or 5 ppt
@@ -193,8 +196,16 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+#
+# CMUS control
+mode "cmus" {
+    bindsym c exec cmus-remote --pause
+    bindsym z exec cmus-remote --prev
+    bindsym b exec cmus-remote --next
 
-bindsym $mod+r mode "resize"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
@@ -228,26 +239,8 @@ bar {
         }
 }
 
-# System menu
-bindsym $mod+Escape exec ~/.local/bin/sysmenu.sh
 
-# Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.local/bin/inc_volume.sh 5 +
-bindsym XF86AudioLowerVolume exec --no-startup-id ~/.local/bin/inc_volume.sh 5 -
-bindsym $mod+x exec --no-startup-id ~/.local/bin/inc_volume.sh 5 +
-bindsym $mod+z exec --no-startup-id ~/.local/bin/inc_volume.sh 5 -
-
-# CMUS control
-mode "cmus" {
-    bindsym c exec cmus-remote --pause
-    bindsym z exec cmus-remote --prev
-    bindsym b exec cmus-remote --next
-
-    bindsym Return mode "default"
-    bindsym Escape mode "default" 
-}
-bindsym $mod+c mode "cmus"
-
+# Startup
 exec_always --no-startup-id "setxkbmap -option"
 exec termite
 exec i3-msg 'workspace ' $workspace1
@@ -256,6 +249,7 @@ exec --no-startup-id udiskie -tc ~/.config/udiskie/config.yml
 exec_always --no-startup-id "killall -q compton; compton -f"
 exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/current.jpg
 
+# Windows settings
 assign [class="Google-chrome"] $workspace0
 assign [class="Tilix"] $workspace1
 assign [class="Termite"] $workspace1
@@ -265,10 +259,10 @@ assign [class="Pgadmin3"] $workspace3
 assign [class="jetbrains-pycharm"] $workspace4
 assign [class="Deadbeef"] $workspace9
 
-focus_follows_mouse no
-
-smart_gaps on
-smart_borders on
 for_window [class=".*"] border pixel 1
 for_window [class="java-lang-Thread"] floating enable
+
+focus_follows_mouse no
+smart_gaps on
+smart_borders on
 gaps inner 5
