@@ -223,25 +223,26 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 
 # Start i3bar to display a workspace bar (plus the system information i3blocks
 # finds out, if available)
-bar {
-        position top
-        font pango:TerminessTTF Nerd Font Mono Medium 13px
-        status_command i3blocks
-        tray_output $monitor1
-        colors {
-            background $bg-color
-            separator #757575
-                               # border           background         text
-            focused_workspace  $bg-color          $bg-color          $text-color
-            inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-            urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-            binding_mode       $binding-bg-color  $binding-bg-color  #000000
-        }
-}
+# bar {
+#         position top
+#         font pango:TerminessTTF Nerd Font Mono Medium 13px
+#         status_command i3blocks
+#         tray_output $monitor1
+#         colors {
+#             background $bg-color
+#             separator #757575
+#                                # border           background         text
+#             focused_workspace  $bg-color          $bg-color          $text-color
+#             inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+#             urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+#             binding_mode       $binding-bg-color  $binding-bg-color  #000000
+#         }
+# }
 
 
 # Startup
 exec_always --no-startup-id "setxkbmap -option"
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec termite
 exec i3-msg 'workspace ' $workspace1
 exec --no-startup-id ibus-daemon -drx
