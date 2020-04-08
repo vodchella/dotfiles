@@ -44,7 +44,7 @@ floating_modifier $mod
 
 # Workspaces
 set $workspace0  "0: Chrome"
-set $workspace1  "1: Terinal"
+set $workspace1  "1: Terminal"
 set $workspace2  "2: Idea"
 set $workspace3  "3: Databases"
 set $workspace4  "4: PyCharm"
