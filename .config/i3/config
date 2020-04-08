@@ -228,8 +228,8 @@ bar {
         }
 }
 
-# Lock screen
-bindsym $mod+Escape exec ~/.local/bin/lock.sh /usr/share/backgrounds/skull.png
+# System menu
+bindsym $mod+Escape exec ~/.local/bin/sysmenu.sh
 
 # Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.local/bin/inc_volume.sh 5 +
