@@ -1,0 +1,4 @@
+i3wm.Monitors.monitor1: eDP-1
+i3wm.Monitors.monitor2: HDMI-1
+polybar.tray.offset.y: -12
+polybar.font-2: Noto Sans Symbols2:size=12;4
