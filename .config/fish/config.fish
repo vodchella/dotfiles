@@ -30,6 +30,8 @@ set -g -x PATH $PATH $ANDROID_HOME/tools
 set -g -x PATH $PATH $ANDROID_HOME/tools/bin
 set -g -x PATH $PATH $ANDROID_HOME/platform-tools
 
+set -g -x JAVA_HOME /usr/lib/jvm/default
+
 alias cd..='cd ..'
 #alias ls='lsd -F'
 alias ssh_bot_srv='ssh -p 17120 root@bot-srv'
