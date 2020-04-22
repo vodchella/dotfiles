@@ -261,6 +261,9 @@ assign [class="jetbrains-pycharm"] $workspace4
 assign [class="Deadbeef"] $workspace9
 
 for_window [class=".*"] border pixel 1
+for_window [class="jetbrains-datagrip" title="win0"] floating enable
+for_window [class="jetbrains-idea" title="win0"] floating enable
+for_window [class="jetbrains-pycharm" title="win0"] floating enable
 for_window [class="java-lang-Thread"] floating enable
 
 focus_follows_mouse no
