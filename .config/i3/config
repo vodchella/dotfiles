@@ -243,8 +243,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # Startup
 exec_always --no-startup-id "setxkbmap -option"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec termite
-exec i3-msg 'workspace ' $workspace1
+exec --no-startup-id i3-msg 'workspace '$workspace1'; exec termite'
 exec --no-startup-id ibus-daemon -drx
 exec --no-startup-id udiskie -tc ~/.config/udiskie/config.yml
 exec_always --no-startup-id "killall -q compton; compton -f"
@@ -252,8 +251,6 @@ exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/current.jpg
 
 # Windows settings
 assign [class="Google-chrome"] $workspace0
-assign [class="Tilix"] $workspace1
-assign [class="Termite"] $workspace1
 assign [class="jetbrains-idea"] $workspace2
 assign [class="jetbrains-datagrip"] $workspace3
 assign [class="Pgadmin3"] $workspace3
