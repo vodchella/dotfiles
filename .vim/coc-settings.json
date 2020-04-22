@@ -1,0 +1,5 @@
+{
+    "python.jediEnabled": false,
+    "coc.preferences.rootPatterns": [".git", "pkg"],
+    "coc.preferences.jumpCommand": "tabe"
+}
