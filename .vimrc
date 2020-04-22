@@ -23,7 +23,7 @@ Plug 'ap/vim-css-color'
 " Programming languages
 Plug 'vim-python/python-syntax'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-python']
+let g:coc_global_extensions = ['coc-python', 'coc-yaml', 'coc-json', 'coc-xml']
 
 " Color shemes
 Plug 'morhetz/gruvbox'
