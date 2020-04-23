@@ -20,6 +20,7 @@ Plug 'dzeban/vim-log-syntax'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ap/vim-css-color'
 Plug 'wincent/terminus'
+Plug 'machakann/vim-highlightedyank'
 
 " Programming languages
 Plug 'mxw/vim-jsx'
