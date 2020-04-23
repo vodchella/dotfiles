@@ -62,6 +62,7 @@ set incsearch
 
 set wrap
 set mouse=a
+set clipboard=unnamedplus
 
 syntax on
 
