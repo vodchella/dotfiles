@@ -60,6 +60,7 @@ set hlsearch
 set incsearch
 
 set wrap
+set mouse=a
 
 syntax on
 
