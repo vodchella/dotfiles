@@ -29,5 +29,5 @@ Used software
 - [termite](https://github.com/thestinger/termite)
 - [udiskie](https://github.com/coldfix/udiskie)
 - [unimatrix](https://github.com/will8211/unimatrix)
-- [vim](https://github.com/vim/vim)
+- [vim](https://github.com/vim/vim) (**gvim** for Arch, **vim-gtk** for Ubuntu)
   - [vim-plug](https://github.com/junegunn/vim-plug)
