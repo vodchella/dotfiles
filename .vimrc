@@ -79,6 +79,9 @@ map <leader>i :IndentGuidesToggle<CR>
 nnoremap <C-l> gt
 nnoremap <C-h> gT
 
+vnoremap > >gv
+vnoremap < <gv
+
 autocmd InsertEnter * set cul
 autocmd InsertLeave * set nocul
 
