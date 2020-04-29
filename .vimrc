@@ -82,6 +82,11 @@ nnoremap <C-h> gT
 vnoremap > >gv
 vnoremap < <gv
 
+vmap <S-Up>   :m '<-2<CR>gv=gv
+vmap <S-Down> :m '>+1<CR>gv=gv
+vmap K <S-Up>
+vmap J <S-Down>
+
 autocmd InsertEnter * set cul
 autocmd InsertLeave * set nocul
 
