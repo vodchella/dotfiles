@@ -4,7 +4,7 @@ LAYOUT=$(setxkbmap -query | grep layout | awk '{ print $2 }')
 if [ "$LAYOUT" != "us"  ]; then
     i3-nagbar -t warning -m 'Не стоит блокировать экран при русской раскладке'
 else
-    HEIGHT=$(xrandr | grep \* | awk '{print $1}' | cut -d "x" -f1)
+    HEIGHT=$(xrandr | grep \* | awk '{print $1}' | cut -d "x" -f1 | head -1)
     PADDING=0
     if [ "$HEIGHT" == "1920" ]; then
         PADDING=40
