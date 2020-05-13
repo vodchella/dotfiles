@@ -7,7 +7,7 @@ else
     HEIGHT=$(xrandr | grep \* | awk '{print $1}' | cut -d "x" -f1 | head -1)
     PADDING=0
     if [ "$HEIGHT" == "1920" ]; then
-        PADDING=40
+        PADDING=260
     fi
     if [ "$HEIGHT" == "1366" ]; then
         PADDING=10
@@ -24,6 +24,6 @@ else
       --ringvercolor=ffffffff --ringwrongcolor=ffffffff --indpos="x+86:y+${CIRCLE_TOP}" \
       --radius=25 --veriftext="" --wrongtext="" \
       --screen=1 --indicator --clock --verifcolor=9b9b9bff --wrongcolor=9b9b9bff \
-      --timepos="x+90:y+920" --timecolor=9b9b9bff --datecolor=9b9b9bff
+      --timepos="x+90:y+${CIRCLE_TOP}-80" --timecolor=9b9b9bff --datecolor=9b9b9bff
     rm /tmp/screen.png
 fi
