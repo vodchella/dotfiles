@@ -66,6 +66,8 @@ set mouse=a
 set clipboard=unnamedplus
 
 set cursorline
+autocmd InsertEnter * set cursorcolumn
+autocmd InsertLeave * set nocursorcolumn
 
 syntax on
 
