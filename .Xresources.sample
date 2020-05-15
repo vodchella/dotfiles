@@ -1,3 +1,4 @@
+this.machine: work
 i3wm.Monitors.monitor1: eDP-1
 i3wm.Monitors.monitor2: HDMI-1
 polybar.tray.offset.y: -12

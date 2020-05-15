@@ -5,11 +5,15 @@ if [ "$LAYOUT" != "us"  ]; then
     i3-nagbar -t warning -m 'Не стоит блокировать экран при русской раскладке'
 else
     HEIGHT=$(xrandr | grep \* | awk '{print $1}' | cut -d "x" -f1 | head -1)
+    MACHINE=$(xrdb -query | grep "this.machine" | cut -f 2)
     PADDING=0
-    if [ "$HEIGHT" == "1920" ]; then
+    if [ "$MACHINE" == "home" ]; then
         PADDING=260
     fi
-    if [ "$HEIGHT" == "1366" ]; then
+    if [ "$MACHINE" == "work" ]; then
+        PADDING=60
+    fi
+    if [ "$MACHINE" == "notebook" ]; then
         PADDING=10
     fi
     CIRCLE_TOP=$((HEIGHT/2+PADDING))
