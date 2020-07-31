@@ -46,8 +46,8 @@ floating_modifier $mod
 set $workspace0  "0: Chrome"
 set $workspace1  "1: Terminal"
 set $workspace2  "2: Idea"
-set $workspace3  "3: Databases"
-set $workspace4  "4: PyCharm"
+set $workspace3  "3: PyCharm"
+set $workspace4  "4."
 set $workspace5  "5."
 set $workspace6  "6."
 set $workspace7  "7."
@@ -253,9 +253,7 @@ exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/current.jpg
 # Windows settings
 assign [class="Google-chrome"] $workspace0
 assign [class="jetbrains-idea"] $workspace2
-assign [class="jetbrains-datagrip"] $workspace3
-assign [class="Pgadmin3"] $workspace3
-assign [class="jetbrains-pycharm"] $workspace4
+assign [class="jetbrains-pycharm"] $workspace3
 assign [class="Deadbeef"] $workspace9
 
 for_window [class=".*"] border pixel 1
