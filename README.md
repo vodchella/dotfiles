@@ -24,6 +24,7 @@ Used software
   - [i3lock-color](https://github.com/Raymo111/i3lock-color) ([PPA](https://github.com/codejamninja/i3lock-color-ubuntu))
 - [polybar](https://github.com/polybar/polybar)
 - [ranger](https://github.com/ranger/ranger)
+  - [dragon](https://aur.archlinux.org/packages/dragon-drag-and-drop/)
 - [rofi](https://github.com/davatorium/rofi)
 - [scrot](https://github.com/dreamer/scrot)
 - [termite](https://github.com/thestinger/termite)
