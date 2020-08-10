@@ -38,6 +38,8 @@ Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+
 colorscheme gruvbox
 set background=dark
 let g:airline_theme='base16'
