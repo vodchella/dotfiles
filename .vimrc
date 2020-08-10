@@ -21,6 +21,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ap/vim-css-color'
 Plug 'wincent/terminus'
 Plug 'machakann/vim-highlightedyank'
+Plug 'easymotion/vim-easymotion'
 
 " Programming languages
 Plug 'mxw/vim-jsx'
@@ -40,10 +41,12 @@ call plug#end()
 colorscheme gruvbox
 set background=dark
 let g:airline_theme='base16'
-let g:airline_enable_fugitive=1
+let g:airline_enable_fugitive = 1
 let g:airline_powerline_fonts = 1
 
-let NERDTreeShowHidden=1
+let g:EasyMotion_do_mapping = 0
+
+let NERDTreeShowHidden = 1
 let NERDTreeMapOpenInTab='<ENTER>'
 
 let g:indent_guides_enable_on_vim_startup = 1
@@ -90,6 +93,10 @@ vmap <S-Up>   :m '<-2<CR>gv=gv
 vmap <S-Down> :m '>+1<CR>gv=gv
 vmap K <S-Up>
 vmap J <S-Down>
+
+map f  <Plug>(easymotion-s)
+map F  <Plug>(easymotion-bd-w)
+
 
 
 
