@@ -39,6 +39,9 @@ Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
 
 colorscheme gruvbox
 set background=dark
