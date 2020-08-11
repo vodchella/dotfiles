@@ -242,6 +242,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 
 
 # Startup
+exec --no-startup-id gsettings set org.freedesktop.ibus.panel xkb-icon-rgba '#458588'
 exec_always --no-startup-id "setxkbmap -option"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id i3-msg 'workspace '$workspace1'; exec termite'
