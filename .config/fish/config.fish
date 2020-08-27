@@ -31,6 +31,7 @@ set -g -x PATH $PATH $ANDROID_HOME/tools/bin
 set -g -x PATH $PATH $ANDROID_HOME/platform-tools
 
 set -g -x JAVA_HOME /usr/lib/jvm/default
+set -g -x LIBRARY_PATH $LIBRARY_PATH /usr/include/gtk-3.0
 
 alias cd..='cd ..'
 #alias ls='lsd -F'
