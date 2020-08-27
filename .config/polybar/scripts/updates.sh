@@ -6,7 +6,13 @@ NOTIFY_ICON=/usr/share/icons/Papirus/32x32/apps/system-software-update.svg
 ROOT_PATH=$(cd $(dirname $0) && pwd);
 
 get_total_updates() {
-    UPDATES=$($ROOT_PATH/checkupdates 2> /dev/null | wc -l);
+    OS=$(lsb_release -a 2> /dev/null | grep 'Distributor ID' | awk -F ':' '{print $2}' | sed 's/^[ \t]*//;s/[ \t]*$//')
+    if (( OS == "Ubuntu"  )); then
+        UPDATES=$(apt list --upgradable 2> /dev/null | wc -l)
+        UPDATES=$((UPDATES-1))
+    else
+        UPDATES=$($ROOT_PATH/checkupdates 2> /dev/null | wc -l);
+    fi
 }
 
 while true; do
