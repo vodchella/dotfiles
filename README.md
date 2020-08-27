@@ -22,6 +22,7 @@ Used software
 - [i3-gaps](https://github.com/Airblader/i3)
   - [i3-blocks](https://github.com/vivien/i3blocks)
   - [i3lock-color](https://github.com/Raymo111/i3lock-color) ([PPA](https://github.com/codejamninja/i3lock-color-ubuntu))
+- [imagemagick](https://github.com/ImageMagick/ImageMagick)
 - [polybar](https://github.com/polybar/polybar)
 - [ranger](https://github.com/ranger/ranger)
   - [dragon](https://aur.archlinux.org/packages/dragon-drag-and-drop/)
