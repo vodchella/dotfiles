@@ -71,6 +71,7 @@ bindsym $mod+Shift+Return exec termite --title=floating-termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
+bindsym --whole-window button2 kill
 
 # start rofi (a program launcher)
 bindsym $mod+d exec rofi \
