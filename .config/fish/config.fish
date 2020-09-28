@@ -22,7 +22,7 @@ fish_default_key_bindings
 fish_ssh_agent
 
 set -g -x fish_greeting 'Привет, Максимка!'
-set -g -x PAGER most
+set -g -x PAGER 'less -RF'
 
 set -g -x ANDROID_HOME $HOME/Android/Sdk
 set -g -x PATH $PATH $ANDROID_HOME/emulator
@@ -44,6 +44,6 @@ alias m='ncmpcpp'
 alias notes='terminal_velocity'
 alias cfg='git --git-dir=$HOME/projects/dotfiles/ --work-tree=$HOME'
 alias pacman_cleanup='sudo pacman -Rsn (pacman -Qdtq)'
-alias bat='bat --pager=never'
+alias bat='bat --pager="less -RF"'
 
 unimatrix -l 'so'
