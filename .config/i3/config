@@ -69,6 +69,9 @@ workspace $workspace9  output $monitor2
 bindsym $mod+Return exec termite
 bindsym $mod+Shift+Return exec termite --title=floating-termite
 
+# start a ncmpcpp
+bindsym $mod+Ctrl+Return exec termite -e ncmpcpp --title=floating-termite
+
 # kill focused window
 bindsym $mod+Shift+q kill
 bindsym --whole-window button2 kill
