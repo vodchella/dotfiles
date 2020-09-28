@@ -178,7 +178,7 @@ bindsym $mod+x exec --no-startup-id ~/.local/bin/inc_volume.sh 5 +
 bindsym $mod+z exec --no-startup-id ~/.local/bin/inc_volume.sh 5 -
 
 # Modes
-bindsym $mod+c mode "cmus"
+bindsym $mod+m mode "mpd"
 bindsym $mod+r mode "resize"
 
 # resize window (you can also use the mouse for that)
@@ -198,12 +198,13 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
 #
-# CMUS control
-mode "cmus" {
-    bindsym c exec cmus-remote --pause
-    bindsym z exec cmus-remote --prev
-    bindsym b exec cmus-remote --next
+# MPD control
+mode "mpd" {
+    bindsym p exec mpc toggle
+    bindsym z exec mpc prev
+    bindsym x exec mpc next
 
     bindsym Return mode "default"
     bindsym Escape mode "default"

@@ -14,7 +14,6 @@ More information: https://www.atlassian.com/git/tutorials/dotfiles
 Used software
 -------------
 
-- [cmus](https://github.com/cmus/cmus)
 - [compton](https://github.com/chjj/compton)
 - [feh](https://github.com/derf/feh)
 - [fish](https://github.com/fish-shell/fish-shell)
@@ -23,6 +22,7 @@ Used software
   - [i3-blocks](https://github.com/vivien/i3blocks)
   - [i3lock-color](https://github.com/Raymo111/i3lock-color) ([PPA](https://github.com/codejamninja/i3lock-color-ubuntu))
 - [imagemagick](https://github.com/ImageMagick/ImageMagick)
+- [mpd](https://www.musicpd.org/), [mpc](https://www.musicpd.org/clients/mpc/), [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)
 - [polybar](https://github.com/polybar/polybar)
 - [ranger](https://github.com/ranger/ranger)
   - [dragon](https://aur.archlinux.org/packages/dragon-drag-and-drop/)
