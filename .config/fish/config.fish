@@ -44,5 +44,6 @@ alias m='ncmpcpp'
 alias notes='terminal_velocity'
 alias cfg='git --git-dir=$HOME/projects/dotfiles/ --work-tree=$HOME'
 alias pacman_cleanup='sudo pacman -Rsn (pacman -Qdtq)'
+alias bat='bat --pager=never'
 
 unimatrix -l 'so'
