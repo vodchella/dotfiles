@@ -22,7 +22,7 @@ fish_default_key_bindings
 fish_ssh_agent
 
 set -g -x fish_greeting 'Привет, Максимка!'
-set -g -x PAGER 'less -RF'
+set -g -x PAGER 'less -RF --mouse --wheel-lines=3'
 
 set -g -x ANDROID_HOME $HOME/Android/Sdk
 set -g -x PATH $PATH $ANDROID_HOME/emulator
