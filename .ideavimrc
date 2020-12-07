@@ -4,6 +4,9 @@ let mapleader = " "
 " Copy to system clipboard as well
 set clipboard+=unnamed
 
+set number
+set relativenumber
+
 set hlsearch
 set incsearch
 
