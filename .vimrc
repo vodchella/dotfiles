@@ -15,20 +15,23 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'dag/vim-fish'
-Plug 'dzeban/vim-log-syntax'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ap/vim-css-color'
 Plug 'wincent/terminus'
 Plug 'machakann/vim-highlightedyank'
 Plug 'easymotion/vim-easymotion'
 
+" Syntax highligting
+Plug 'cespare/vim-toml'
+Plug 'dzeban/vim-log-syntax'
+Plug 'dag/vim-fish'
+
 " Programming languages
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-python/python-syntax'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-python', 'coc-yaml', 'coc-json', 'coc-xml', 'coc-eslint', 'coc-tsserver']
+let g:coc_global_extensions = ['coc-python', 'coc-yaml', 'coc-toml', 'coc-json', 'coc-xml', 'coc-eslint', 'coc-tsserver']
 
 " Color shemes
 Plug 'morhetz/gruvbox'
