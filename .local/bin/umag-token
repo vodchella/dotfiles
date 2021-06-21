@@ -4,6 +4,7 @@ from base64 import standard_b64encode
 from json.decoder import JSONDecodeError
 from typing import Optional
 from requests import request
+from requests.exceptions import ConnectionError
 from sys import stderr
 
 
@@ -16,7 +17,7 @@ BASE_URL = 'http://localhost:8080/rest/'
 
 
 def write_stderr(line: str):
-    stderr.write(line)
+    stderr.write(f'Oops, {line}\n')
     stderr.flush()
 
 
@@ -26,15 +27,18 @@ def auth(login: str, password: str) -> Optional[str]:
         **UMAG_BASIC_HEADERS,
         'Authorization': f'Basic {str(encoded_credentials, "utf-8")}',
     }
-    response = request('GET', f'{BASE_URL}cabinet/org/login/signin', headers=headers)
 
-    if response.ok:
-        try:
-            return response.json()['sessionToken']
-        except JSONDecodeError:
-            write_stderr('Oops, invalid json response\n')
-    else:
-        write_stderr(f'Oops, there is {str(response.status_code)}\n')
+    try:
+        response = request('GET', f'{BASE_URL}cabinet/org/login/signin', headers=headers)
+        if response.ok:
+            try:
+                return response.json()['sessionToken']
+            except JSONDecodeError:
+                write_stderr('invalid json response')
+        else:
+            write_stderr(f'there is {str(response.status_code)}')
+    except ConnectionError:
+        write_stderr('server unavailable')
 
     return None
 
