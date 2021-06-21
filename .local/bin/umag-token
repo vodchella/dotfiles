@@ -1,0 +1,44 @@
+#!/usr/bin/python3
+
+from base64 import standard_b64encode
+from json.decoder import JSONDecodeError
+from typing import Optional
+from requests import request
+from sys import stderr
+
+
+UMAG_BASIC_HEADERS = {
+    'api-ver': '1.4',
+    'client-ver': '1c_integrator_0.0.1',
+}
+
+BASE_URL = 'http://localhost:8080/rest/'
+
+
+def write_stderr(line: str):
+    stderr.write(line)
+    stderr.flush()
+
+
+def auth(login: str, password: str) -> Optional[str]:
+    encoded_credentials = standard_b64encode(f'{login}:{password}'.encode('utf-8'))
+    headers = {
+        **UMAG_BASIC_HEADERS,
+        'Authorization': f'Basic {str(encoded_credentials, "utf-8")}',
+    }
+    response = request('GET', f'{BASE_URL}cabinet/org/login/signin', headers=headers)
+
+    if response.ok:
+        try:
+            return response.json()['sessionToken']
+        except JSONDecodeError:
+            write_stderr('Oops, invalid json response\n')
+    else:
+        write_stderr(f'Oops, there is {str(response.status_code)}\n')
+
+    return None
+
+
+if __name__ == '__main__':
+    if token := auth('+77761522222', '11111'):
+        print(token)
