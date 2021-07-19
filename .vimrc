@@ -20,6 +20,7 @@ Plug 'ap/vim-css-color'
 Plug 'wincent/terminus'
 Plug 'machakann/vim-highlightedyank'
 Plug 'easymotion/vim-easymotion'
+Plug 'kshenoy/vim-signature'
 
 " Syntax highligting
 Plug 'cespare/vim-toml'
