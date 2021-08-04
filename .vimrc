@@ -21,6 +21,7 @@ Plug 'wincent/terminus'
 Plug 'machakann/vim-highlightedyank'
 Plug 'easymotion/vim-easymotion'
 Plug 'kshenoy/vim-signature'
+Plug 'lervag/vimtex'
 
 " Syntax highligting
 Plug 'cespare/vim-toml'
@@ -32,7 +33,7 @@ Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-python/python-syntax'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-python', 'coc-yaml', 'coc-toml', 'coc-json', 'coc-xml', 'coc-eslint', 'coc-tsserver']
+let g:coc_global_extensions = ['coc-python', 'coc-yaml', 'coc-toml', 'coc-json', 'coc-xml', 'coc-eslint', 'coc-tsserver', 'coc-vimtex']
 
 " Color shemes
 Plug 'morhetz/gruvbox'
