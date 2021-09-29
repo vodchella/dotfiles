@@ -34,21 +34,25 @@ LIGHT_BLUE="#039be5"
 LIGHT_GREEN="#7cb342"
 
 # Launch Rofi
-MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'System :' \
--hide-scrollbar true \
--bw 0 \
--lines 4 \
--line-padding 10 \
--padding 20 \
--width 15 \
--columns 1 \
--show-icons -icon-theme "Papirus" \
--font "Fantasque Sans Mono 10" \
--color-enabled true \
--color-window "$BACKGROUND,$BORDER,$SEPARATOR" \
--color-normal "$BACKGROUND_ALT,$FOREGROUND,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
--color-active "$BACKGROUND,$MAGENTA,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
--color-urgent "$BACKGROUND,$YELLOW,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
+#MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'System :' \
+#-hide-scrollbar true \
+#-bw 0 \
+#-lines 4 \
+#-line-padding 10 \
+#-padding 20 \
+#-width 15 \
+#-columns 1 \
+#-show-icons -icon-theme "Papirus" \
+#-font "Fantasque Sans Mono 10" \
+#-color-enabled true \
+#-color-window "$BACKGROUND,$BORDER,$SEPARATOR" \
+#-color-normal "$BACKGROUND_ALT,$FOREGROUND,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
+#-color-active "$BACKGROUND,$MAGENTA,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
+#-color-urgent "$BACKGROUND,$YELLOW,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
+MENU="$(rofi \
+-sep "|" -dmenu -i -p 'System :' \
+-font "Fantasque Sans Mono 12" \
+-theme "~/.local/share/rofi/themes/Arc-Dark-sysmenu.rasi" \
 <<< "  Lock|  Logout|  Reboot|  Shutdown")"
 case "$MENU" in
   *Lock) ~/.local/bin/lock.sh /usr/share/backgrounds/skull.png ;;
