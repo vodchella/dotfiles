@@ -38,6 +38,8 @@
     background-color: @background;
     border:           1;
     padding:          5;
+    width:            150;
+    height:           120;
 }
 #mainbox {
     border:  0;
@@ -108,10 +110,10 @@ element-icon {
 }
 
 #scrollbar {
-    width:        4px ;
+    width:        0px ;
     border:       0;
     handle-color: @normal-foreground;
-    handle-width: 8px ;
+    handle-width: 0px ;
     padding:      0;
 }
 #mode-switcher {
