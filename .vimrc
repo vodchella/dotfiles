@@ -62,6 +62,8 @@ let NERDTreeMapOpenInTab='<ENTER>'
 let g:indent_guides_enable_on_vim_startup = 1
 let g:python_highlight_all = 1
 
+set noswapfile
+
 set number relativenumber
 set nu rnu
 set listchars=tab:··
