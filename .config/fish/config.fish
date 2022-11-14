@@ -29,6 +29,7 @@ set -g -x PATH $PATH $ANDROID_HOME/emulator
 set -g -x PATH $PATH $ANDROID_HOME/tools
 set -g -x PATH $PATH $ANDROID_HOME/tools/bin
 set -g -x PATH $PATH $ANDROID_HOME/platform-tools
+set -g -x PATH $PATH $HOME/.local/bin
 
 set -g -x JAVA_HOME /usr/lib/jvm/default
 set -g -x LIBRARY_PATH $LIBRARY_PATH /usr/include/gtk-3.0
