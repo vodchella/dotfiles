@@ -24,7 +24,7 @@ Used software
   - [i3-blocks](https://github.com/vivien/i3blocks)
   - [i3lock-color](https://github.com/Raymo111/i3lock-color) ([PPA](https://github.com/codejamninja/i3lock-color-ubuntu))
 - [imagemagick](https://github.com/ImageMagick/ImageMagick)
-- [mpd](https://www.musicpd.org/), [mpc](https://www.musicpd.org/clients/mpc/), [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)
+- ~~[mpd](https://www.musicpd.org/), [mpc](https://www.musicpd.org/clients/mpc/), [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)~~
 - [nala](https://github.com/volitank/nala) for Ubuntu
 - [pacstall](https://github.com/pacstall/pacstall) for Ubuntu
 - [polybar](https://github.com/polybar/polybar)
@@ -32,7 +32,7 @@ Used software
   - [dragon](https://aur.archlinux.org/packages/dragon-drag-and-drop/)
 - [rofi](https://github.com/davatorium/rofi)
 - [scrot](https://github.com/dreamer/scrot)
-- [termite](https://github.com/thestinger/termite)
+- ~~[termite](https://github.com/thestinger/termite)~~
 - [udiskie](https://github.com/coldfix/udiskie)
 - [unimatrix](https://github.com/will8211/unimatrix)
 - [vim](https://github.com/vim/vim) (**gvim** for Arch, **vim-gtk** for Ubuntu)
