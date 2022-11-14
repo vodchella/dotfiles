@@ -24,6 +24,8 @@ Used software
   - [i3lock-color](https://github.com/Raymo111/i3lock-color) ([PPA](https://github.com/codejamninja/i3lock-color-ubuntu))
 - [imagemagick](https://github.com/ImageMagick/ImageMagick)
 - [mpd](https://www.musicpd.org/), [mpc](https://www.musicpd.org/clients/mpc/), [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)
+- [nala](https://github.com/volitank/nala) for Ubuntu
+- [pacstall](https://github.com/pacstall/pacstall) for Ubuntu
 - [polybar](https://github.com/polybar/polybar)
 - [ranger](https://github.com/ranger/ranger)
   - [dragon](https://aur.archlinux.org/packages/dragon-drag-and-drop/)
