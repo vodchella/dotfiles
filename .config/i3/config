@@ -66,8 +66,10 @@ workspace $workspace8  output $monitor2
 workspace $workspace9  output $monitor2
 
 # start a terminal
-bindsym $mod+Return exec termite
-bindsym $mod+Shift+Return exec termite --title=floating-termite
+#bindsym $mod+Return exec termite
+#bindsym $mod+Shift+Return exec termite --title=floating-termite
+bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+Return exec alacritty -o window.dynamic_title=false window.title=floating-alacritty
 
 # start a ncmpcpp
 bindsym $mod+Ctrl+Return exec termite -e ncmpcpp --title=floating-termite
@@ -265,7 +267,8 @@ for_window [class="jetbrains-datagrip" title="win0"] floating enable
 for_window [class="jetbrains-idea" title="win0"] floating enable
 for_window [class="jetbrains-pycharm" title="win0"] floating enable
 for_window [class="java-lang-Thread"] floating enable
-for_window [class="Termite" title="floating-termite"] floating enable
+for_window [class="Alacritty" title="floating-alacritty"] floating enable
+#for_window [class="Termite" title="floating-termite"] floating enable
 
 focus_follows_mouse no
 smart_gaps on

@@ -14,6 +14,7 @@ More information: https://www.atlassian.com/git/tutorials/dotfiles
 Used software
 -------------
 
+- [alacritty](https://github.com/alacritty/alacritty)
 - [bat](https://github.com/sharkdp/bat)
 - [compton](https://github.com/chjj/compton)
 - [feh](https://github.com/derf/feh)
