@@ -65,12 +65,6 @@ alias find_files='f(){ find . -name "$@";  unset -f f; }; f'
 alias rm_files='f(){ find . -name "$@" -delete;  unset -f f; }; f'
 alias git_log='git log --graph --pretty="format:%C(yellow)%h%Creset %Cgreen%an%Creset, %C(cyan)%ar%Creset%n%s"'
 
-
-alias ssh_linux_test='ssh novelty@linux_test'
-alias ssh_linux_main='ssh -p 35464 novelty@linux_main'
-alias ssh_linux_reserve='ssh -p 35464 novelty@linux_reserve'
-alias ssh_activiti_server='ssh vodchella@activiti-server'
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -189,3 +183,4 @@ export PS1='${debian_chroot:+($debian_chroot)}[$(txt_yellow)\u$(txt_reset)@$(txt
 export PAGER=most
 export EDITOR='vim'
 
+. $HOME/.bash_local_settings
