@@ -237,7 +237,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 exec --no-startup-id gsettings set org.freedesktop.ibus.panel xkb-icon-rgba '#458588'
 exec_always --no-startup-id "setxkbmap -option"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id i3-msg 'workspace '$workspace1'; exec termite'
+exec --no-startup-id i3-msg 'workspace '$workspace1'; exec alacritty'
 exec --no-startup-id ibus-daemon -drx
 exec --no-startup-id udiskie -tc ~/.config/udiskie/config.yml
 exec_always --no-startup-id "killall -q compton; compton -f"
