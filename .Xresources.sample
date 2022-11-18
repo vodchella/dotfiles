@@ -1,5 +1,6 @@
 this.machine: work
 i3wm.Monitors.monitor1: eDP-1
 i3wm.Monitors.monitor2: HDMI-1
-polybar.tray.offset.y: -12
+polybar.tray.offset.y: -19
+polybar.tray.offset.y: -18
 polybar.font-2: Noto Sans Symbols2:size=12;4
