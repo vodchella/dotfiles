@@ -9,7 +9,7 @@ return require('packer').startup(function(use)
     use 'machakann/vim-highlightedyank'
     use 'morhetz/gruvbox'
     use 'ap/vim-css-color'
-    use 'nathanaelkane/vim-indent-guides'
+    use 'lukas-reineke/indent-blankline.nvim'
     use 'kyazdani42/nvim-web-devicons'
 
     -- Widgets
