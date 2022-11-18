@@ -26,6 +26,7 @@ set.mouse = 'a'
 set.clipboard = 'unnamedplus'
 
 set.cursorline = true
+set.scrolloff = 5
 
 vim.cmd [[silent! colorscheme gruvbox]]
 
