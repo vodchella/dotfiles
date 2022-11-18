@@ -1,0 +1,6 @@
+require('settings')
+require('mappings')
+require('events')
+require('plugins')
+require('statusline')
+require('tabline')

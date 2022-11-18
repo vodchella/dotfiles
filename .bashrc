@@ -181,6 +181,6 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 export PS1='${debian_chroot:+($debian_chroot)}[$(txt_yellow)\u$(txt_reset)@$(txt_green)\h$(txt_reset)]$(virtualenv_info) $(txt_blue)\w$(txt_reset) \$\n$(txt_red)$(check_svn)$(check_git):$(txt_reset) '
 export PAGER=most
-export EDITOR='vim'
+export EDITOR='nvim'
 
 . $HOME/.bash_local_settings

@@ -26,6 +26,8 @@ Used software
 - [imagemagick](https://github.com/ImageMagick/ImageMagick)
 - [mpd](https://www.musicpd.org/), [mpc](https://www.musicpd.org/clients/mpc/), [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)
 - [nala](https://github.com/volitank/nala) (for Ubuntu)
+- [neovim](https://github.com/neovim/neovim)
+  - [packer.nvim](https://github.com/wbthomason/packer.nvim)
 - [pacstall](https://github.com/pacstall/pacstall) (for Ubuntu)
 - [polybar](https://github.com/polybar/polybar)
 - [ranger](https://github.com/ranger/ranger)
@@ -34,5 +36,5 @@ Used software
 - [scrot](https://github.com/dreamer/scrot)
 - [udiskie](https://github.com/coldfix/udiskie)
 - [unimatrix](https://github.com/will8211/unimatrix)
-- [vim](https://github.com/vim/vim) (**gvim** for Arch, **vim-gtk** for Ubuntu)
-  - [vim-plug](https://github.com/junegunn/vim-plug)
+- ~~[vim](https://github.com/vim/vim) (**gvim** for Arch, **vim-gtk** for Ubuntu)~~
+  - ~~[vim-plug](https://github.com/junegunn/vim-plug)~~

@@ -15,7 +15,7 @@
 set -g __fish_git_prompt_char_dirtystate "⚡"
 set -g __fish_git_prompt_char_stagedstate "+"
 
-set -Ux EDITOR vim
+set -Ux EDITOR nvim
 # cat ~/.cache/wal/sequences & clear
 fish_default_key_bindings
 
@@ -38,6 +38,7 @@ set -g -x LIBRARY_PATH $LIBRARY_PATH /usr/include/gtk-3.0
 alias cd..='cd ..'
 alias r='ranger --choosedir=$HOME/.config/ranger/.rangerdir; cd (cat $HOME/.config/ranger/.rangerdir)'
 alias m='ncmpcpp'
+alias v='nvim'
 alias cfg='git --git-dir=$HOME/projects/dotfiles/ --work-tree=$HOME'
 alias pacman_cleanup='sudo pacman -Rsn (pacman -Qdtq)'
 alias bat='bat --pager="less -RF"'
