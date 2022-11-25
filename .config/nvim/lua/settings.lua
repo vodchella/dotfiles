@@ -30,4 +30,4 @@ set.scrolloff = 5
 
 vim.cmd [[silent! colorscheme gruvbox]]
 
-vim.notify = require("notify")
+-- vim.notify = require("notify")
