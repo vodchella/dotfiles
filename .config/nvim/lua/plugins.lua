@@ -4,6 +4,7 @@ return require('packer').startup(function(use)
 
     -- Text editing
     use 'jiangmiao/auto-pairs'
+    use 'numToStr/Comment.nvim'
 
     -- Look and feel
     use 'machakann/vim-highlightedyank'
