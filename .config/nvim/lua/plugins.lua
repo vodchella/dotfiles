@@ -34,4 +34,5 @@ return require('packer').startup(function(use)
 
     -- Other
     use 'nvim-lua/plenary.nvim'
+    use 'nvim-treesitter/nvim-treesitter'
 end)
