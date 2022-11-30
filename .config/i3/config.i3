@@ -70,7 +70,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+Return exec alacritty -o window.dynamic_title=false window.title=floating-alacritty
 
 # start a ncmpcpp
-bindsym $mod+Ctrl+Return exec termite -e ncmpcpp --title=floating-termite
+# bindsym $mod+Ctrl+Return exec termite -e ncmpcpp --title=floating-termite
 
 # kill focused window
 bindsym $mod+Shift+q kill

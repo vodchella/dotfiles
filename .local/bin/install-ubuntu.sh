@@ -11,12 +11,16 @@ sudo apt update
 # Pacstall
 sudo bash -c "$(curl -fsSL https://git.io/JsADh || wget -q https://git.io/JsADh -O -)"
 
+# For i3lock-color
+sudo apt install -y \
+    libxcb-composite0-dev \
+    libjpeg-dev \
+    libpam0g-dev
 
 pacstall -I -P \
     alacritty \
     i3-gaps i3lock-color \
-    nala-deb \
-    polybar
+    nala-deb
 
 sudo nala install -y \
     arc-theme \
@@ -27,6 +31,7 @@ sudo nala install -y \
     feh \
     fish \
     git \
+    grim \
     htop \
     imagemagick \
     google-chrome-stable \
@@ -35,13 +40,16 @@ sudo nala install -y \
     neovim \
     npm \
     oxygen-cursor-theme \
+    polybar \
     python3-pip \
     ranger \
     rofi \
     scrot \
     shellcheck \
     sway \
-    udiskie
+    swaylock \
+    udiskie \
+    viewnior
 
 sudo pip3 install \
     powerline-shell \
