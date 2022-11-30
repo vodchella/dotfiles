@@ -21,7 +21,7 @@ Used software
 - [fish](https://github.com/fish-shell/fish-shell)
   - [powerline-shell](https://github.com/b-ryan/powerline-shell)
 - [i3-gaps](https://github.com/Airblader/i3)
-  - [i3-blocks](https://github.com/vivien/i3blocks)
+  - ~~[i3-blocks](https://github.com/vivien/i3blocks)~~
   - [i3lock-color](https://github.com/Raymo111/i3lock-color) ([PPA](https://github.com/codejamninja/i3lock-color-ubuntu))
 - [imagemagick](https://github.com/ImageMagick/ImageMagick)
 - [mpd](https://www.musicpd.org/), [mpc](https://www.musicpd.org/clients/mpc/), [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)
@@ -31,7 +31,7 @@ Used software
 - [pacstall](https://github.com/pacstall/pacstall) (for Ubuntu)
 - [polybar](https://github.com/polybar/polybar)
 - [ranger](https://github.com/ranger/ranger)
-  - [dragon](https://aur.archlinux.org/packages/dragon-drag-and-drop/)
+  - ~~[dragon](https://aur.archlinux.org/packages/dragon-drag-and-drop/)~~
 - [rofi](https://github.com/davatorium/rofi) (version >= 1.7.3)
 - [scrot](https://github.com/dreamer/scrot)
 - [udiskie](https://github.com/coldfix/udiskie)
