@@ -48,6 +48,8 @@ set $workspace7  "7."
 set $workspace8  "8."
 set $workspace9  "9."
 
+set $monitor1 "HDMI-A-1"
+
 workspace $workspace0  output $monitor1
 workspace $workspace1  output $monitor1
 workspace $workspace2  output $monitor1
@@ -56,8 +58,8 @@ workspace $workspace4  output $monitor1
 workspace $workspace5  output $monitor1
 workspace $workspace6  output $monitor1
 workspace $workspace7  output $monitor1
-workspace $workspace8  output $monitor2
-workspace $workspace9  output $monitor2
+workspace $workspace8  output $monitor1
+workspace $workspace9  output $monitor1
 
 # start a terminal
 bindsym $mod+Return exec alacritty
@@ -68,7 +70,7 @@ bindsym $mod+Shift+Return exec alacritty -o window.dynamic_title=false window.ti
 
 # kill focused window
 bindsym $mod+Shift+q kill
-bindsym --whole-window button2 kill
+# bindsym --whole-window button2 kill
 
 # start rofi (a program launcher)
 bindsym $mod+shift+d exec ~/.config/rofi/scripts/launcher_t2

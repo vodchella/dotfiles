@@ -57,11 +57,11 @@ sudo pip3 install \
 
 sudo npm install -g tree-sitter-cli
 
+# Packer for NVim
+git clone --depth 1 https://github.com/wbthomason/packer.nvim \
+    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
 sudo apt autoremove
 
 sudo usermod -aG docker "${USER}"
 touch ~/.config/ranger/scope.sh
-
-# Packer for NVim
-git clone --depth 1 https://github.com/wbthomason/packer.nvim \
-    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
