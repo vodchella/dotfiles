@@ -19,6 +19,7 @@ pacstall -I -P \
     polybar
 
 sudo nala install -y \
+    arc-theme \
     bat \
     compton \
     curl \
@@ -29,14 +30,17 @@ sudo nala install -y \
     htop \
     imagemagick \
     google-chrome-stable \
+    lxappearance \
     most \
     neovim \
     npm \
+    oxygen-cursor-theme \
     python3-pip \
     ranger \
     rofi \
     scrot \
     shellcheck \
+    sway \
     udiskie
 
 sudo pip3 install \
