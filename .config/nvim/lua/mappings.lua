@@ -16,6 +16,7 @@ map('n', 'F', '<cmd>Telescope live_grep<CR>', opts)
 
 -- nvim-tree
 map('n', '<leader>t', ':NvimTreeToggle<CR>', opts)
+map('n', 'gf', ':NvimTreeFindFile<CR>', opts)
 
 -- Windows
 map('n', '<leader><Left>', '<C-w><C-w>', opts)  -- Switch between windows
