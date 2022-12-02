@@ -5,6 +5,12 @@ vim.g.mapleader = ' '
 
 map('n', '<leader>w', ':set nowrap<CR>', opts)
 
+-- nvim-tree
+map('n', '<leader>t', ':NvimTreeToggle<CR>', opts)
+
+-- Windows
+map('n', '<leader><Left>', '<C-w><C-w>', opts)  -- Switch between windows
+
 -- Selected text moving
 map('v', '>', '>gv', opts)
 map('v', '<', '<gv', opts)
@@ -33,3 +39,5 @@ map('n', '<A-7>', '<Cmd>BufferGoto 7<CR>', opts)
 map('n', '<A-8>', '<Cmd>BufferGoto 8<CR>', opts)
 map('n', '<A-9>', '<Cmd>BufferGoto 9<CR>', opts)
 map('n', '<A-0>', '<Cmd>BufferLast<CR>', opts)
+-- Close current tab
+map('n', '<leader>q', '<Cmd>BufferClose<CR>', opts)

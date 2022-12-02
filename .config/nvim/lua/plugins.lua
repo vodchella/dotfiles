@@ -16,6 +16,7 @@ return require('packer').startup(function(use)
     -- Widgets
     use 'nvim-lualine/lualine.nvim'
     use 'romgrk/barbar.nvim'
+    use 'nvim-tree/nvim-tree.lua'
     -- use 'rcarriga/nvim-notify'
 
     -- LSP
