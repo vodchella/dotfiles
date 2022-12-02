@@ -43,6 +43,7 @@ sudo nala install -y \
     polybar \
     python3-pip \
     ranger \
+    ripgrep \
     rofi \
     scrot \
     shellcheck \

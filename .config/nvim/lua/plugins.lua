@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
     use 'nvim-lualine/lualine.nvim'
     use 'romgrk/barbar.nvim'
     use 'nvim-tree/nvim-tree.lua'
+    use 'nvim-telescope/telescope.nvim'
     -- use 'rcarriga/nvim-notify'
 
     -- LSP

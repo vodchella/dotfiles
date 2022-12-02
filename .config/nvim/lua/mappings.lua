@@ -5,6 +5,15 @@ vim.g.mapleader = ' '
 
 map('n', '<leader>w', ':set nowrap<CR>', opts)
 
+-- LSP
+map('n', 'gd', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+map('n', 'gR', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+map('n', 'gD', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
+
+-- Telescope
+map('n', '<leader>f', '<cmd>Telescope find_files<CR>', opts)
+map('n', 'F', '<cmd>Telescope live_grep<CR>', opts)
+
 -- nvim-tree
 map('n', '<leader>t', ':NvimTreeToggle<CR>', opts)
 
