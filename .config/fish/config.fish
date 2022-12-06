@@ -42,6 +42,7 @@ alias v='nvim'
 alias cfg='git --git-dir=$HOME/projects/dotfiles/ --work-tree=$HOME'
 alias pacman_cleanup='sudo pacman -Rsn (pacman -Qdtq)'
 alias bat='bat --pager="less -RF"'
+alias activate_poetry_env='source (poetry env info --path)/bin/activate.fish'
 
 fish_local_settings
 unimatrix -l 'so'
