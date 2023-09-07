@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import argparse
 from base64 import standard_b64encode
 from json.decoder import JSONDecodeError
 from typing import Optional
@@ -14,6 +15,11 @@ UMAG_BASIC_HEADERS = {
 }
 
 BASE_URL = 'http://localhost:8080/rest/'
+CABINET_LOGIN_URL = f'{BASE_URL}cabinet/org/login/signin'
+ADMIN_LOGIN_URL = f'{BASE_URL}admin/org/login/signin'
+
+CABINET_AUTH_DATA = ('+77761522222', '11111', CABINET_LOGIN_URL)
+ADMIN_AUTH_DATA = ('+77786649388', '11111', ADMIN_LOGIN_URL)
 
 
 def write_stderr(line: str):
@@ -21,7 +27,18 @@ def write_stderr(line: str):
     stderr.flush()
 
 
-def auth(login: str, password: str) -> Optional[str]:
+def create_argparse():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        '-a',
+        '--admin',
+        action='store_true',
+        help='Login to the Admin Panel'
+    )
+    return parser.parse_args()
+
+
+def auth(login: str, password: str, url: str) -> Optional[str]:
     encoded_credentials = standard_b64encode(f'{login}:{password}'.encode('utf-8'))
     headers = {
         **UMAG_BASIC_HEADERS,
@@ -29,7 +46,7 @@ def auth(login: str, password: str) -> Optional[str]:
     }
 
     try:
-        response = request('GET', f'{BASE_URL}cabinet/org/login/signin', headers=headers)
+        response = request('GET', url, headers=headers)
         if response.ok:
             try:
                 return response.json()['sessionToken']
@@ -44,5 +61,6 @@ def auth(login: str, password: str) -> Optional[str]:
 
 
 if __name__ == '__main__':
-    if token := auth('+77761522222', '11111'):
+    args = create_argparse()
+    if token := auth(*(ADMIN_AUTH_DATA if args.admin else CABINET_AUTH_DATA)):
         print(token)
