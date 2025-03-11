@@ -20,6 +20,7 @@ Used software
 - [feh](https://github.com/derf/feh)
 - [fish](https://github.com/fish-shell/fish-shell)
   - [powerline-shell](https://github.com/b-ryan/powerline-shell)
+- [fzf](https://github.com/junegunn/fzf)
 - [i3-gaps](https://github.com/Airblader/i3)
   - ~~[i3-blocks](https://github.com/vivien/i3blocks)~~
   - [i3lock-color](https://github.com/Raymo111/i3lock-color) ([PPA](https://github.com/codejamninja/i3lock-color-ubuntu))

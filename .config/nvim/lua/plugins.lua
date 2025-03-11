@@ -54,6 +54,9 @@ return require('packer').startup(function(use)
     use 'nvim-treesitter/nvim-treesitter'
     use 'echasnovski/mini.nvim'
 
+    use 'junegunn/fzf'
+    use 'junegunn/fzf.vim'
+
     if packer_bootstrap then
       require('packer').sync()
     end

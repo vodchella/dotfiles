@@ -5,6 +5,10 @@ vim.g.mapleader = ' '
 
 map('n', '<leader>w', ':set nowrap<CR>', opts)
 
+-- FZF
+map('n', '<C-l>', ':Lines<CR>', { noremap = true, silent = true })
+map('n', '<C-m>', ':Marks<CR>', { noremap = true, silent = true })
+
 -- LSP
 map('n', 'gd', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
 map('n', 'gR', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
