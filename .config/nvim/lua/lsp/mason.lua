@@ -1,13 +1,13 @@
 local servers = {
-    'bashls',
-    'dockerls',
-    'html',
-    'jsonls',
-    'sumneko_lua',
-    'marksman',
-    'pyright',
-    'lemminx',  -- XML
-    'yamlls',
+    --'bashls',
+    --'dockerls',
+    --'html',
+    --'jsonls',
+    --'sumneko_lua',
+    --'marksman',
+    --'pyright',
+    --'lemminx',  -- XML
+    --'yamlls',
 
 }
 

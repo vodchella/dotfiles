@@ -44,5 +44,5 @@ alias pacman_cleanup='sudo pacman -Rsn (pacman -Qdtq)'
 alias bat='bat --pager="less -RF"'
 alias activate_poetry_env='source (poetry env info --path)/bin/activate.fish'
 
-fish_local_settings
+# fish_local_settings
 unimatrix -l 'so'
