@@ -12,6 +12,7 @@ require'nvim-treesitter.configs'.setup {
         'pascal',
         'python',
         'regex',
+        'rust',
         'sql',
         'vim',
         'yaml'

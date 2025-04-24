@@ -184,3 +184,4 @@ export PAGER=most
 export EDITOR='nvim'
 
 . $HOME/.bash_local_settings
+. "$HOME/.cargo/env"
