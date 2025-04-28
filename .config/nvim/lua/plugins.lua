@@ -27,12 +27,34 @@ return require('packer').startup(function(use)
     use 'lukas-reineke/indent-blankline.nvim'
     use 'kyazdani42/nvim-web-devicons'
 
+    -- Highlighting
+    use 'nvim-treesitter/nvim-treesitter'
+    use({
+        'MeanderingProgrammer/render-markdown.nvim',
+        after = { 'nvim-treesitter' },
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+        config = function()
+            require('render-markdown').setup({})
+        end,
+    })
+
     -- Widgets
     use 'nvim-lualine/lualine.nvim'
---    use 'romgrk/barbar.nvim'
     use 'nvim-tree/nvim-tree.lua'
     use 'nvim-telescope/telescope.nvim'
-    -- use 'rcarriga/nvim-notify'
+    use {
+        'akinsho/bufferline.nvim',
+        tag = "*",
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+        config = function()
+            require('bufferline').setup({
+                options = {
+                    show_close_icon = false,
+                    show_buffer_close_icons = false,
+                }
+            })
+        end
+    }
 
     -- LSP
     use 'neovim/nvim-lspconfig'
@@ -51,11 +73,19 @@ return require('packer').startup(function(use)
 
     -- Other
     use 'nvim-lua/plenary.nvim'
-    use 'nvim-treesitter/nvim-treesitter'
     use 'echasnovski/mini.nvim'
 
     use 'junegunn/fzf'
     use 'junegunn/fzf.vim'
+
+    use {
+        'vodchella/hodur.nvim',
+        config = function()
+            require('hodur').setup({
+                key = "<C-g>"
+            })
+        end
+    }
 
     if packer_bootstrap then
       require('packer').sync()

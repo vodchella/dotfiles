@@ -41,6 +41,7 @@ alias cd..='cd ..'
 alias r='ranger --choosedir=$HOME/.config/ranger/.rangerdir; cd (cat $HOME/.config/ranger/.rangerdir)'
 alias m='ncmpcpp'
 alias v='nvim'
+alias vt="nvim -c terminal";
 alias cfg='git --git-dir=$HOME/projects/dotfiles/ --work-tree=$HOME'
 alias pacman_cleanup='sudo pacman -Rsn (pacman -Qdtq)'
 alias bat='bat --pager="less -RF"'
@@ -48,6 +49,7 @@ alias activate_poetry_env='source (poetry env info --path)/bin/activate.fish'
 
 # Set up fzf key bindings
 fzf --fish | source
+bind \cf fzf-file-widget
 
 # fish_local_settings
 unimatrix -l 'so'

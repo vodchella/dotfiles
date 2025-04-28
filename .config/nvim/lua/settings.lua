@@ -30,4 +30,9 @@ set.scrolloff = 5
 
 vim.cmd [[silent! colorscheme gruvbox]]
 
--- vim.notify = require("notify")
+vim.api.nvim_create_autocmd("TermOpen", {
+    pattern = "*",
+    callback = function()
+        vim.cmd("startinsert")
+    end,
+})

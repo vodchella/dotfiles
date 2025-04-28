@@ -5,9 +5,15 @@ vim.g.mapleader = ' '
 
 map('n', '<leader>w', ':set nowrap<CR>', opts)
 
+-- Terminal
+map('n', '<C-t>', ':terminal<CR>', opts)
+map('t', '<C-i>', [[<C-\><C-n>]], opts)
+
 -- FZF
-map('n', '<C-l>', ':Lines<CR>', { noremap = true, silent = true })
-map('n', '<C-m>', ':Marks<CR>', { noremap = true, silent = true })
+map('n', '<C-l>', ':Lines<CR>', opts)
+map('n', '<C-m>', ':Marks<CR>', opts)
+map('n', '<C-f>', ':Files<CR>', opts)
+map('n', '<C-b>', ':Buffers<CR>', opts)
 
 -- LSP
 map('n', 'gd', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
