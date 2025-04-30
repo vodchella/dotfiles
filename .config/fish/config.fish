@@ -39,6 +39,8 @@ set -g -x FZF_DEFAULT_OPTS "--height 40% --border rounded --layout reverse --poi
 
 alias cd..='cd ..'
 alias r='ranger --choosedir=$HOME/.config/ranger/.rangerdir; cd (cat $HOME/.config/ranger/.rangerdir)'
+alias a='atac -d (find ~/.config/atac -mindepth 1 -maxdepth 1 -type d -not -path "*/.git*" | fzf)'
+alias gp='cd (find ~/projects -mindepth 1 -maxdepth 1 -type d -not -path "*/.git*" | fzf)'
 alias m='ncmpcpp'
 alias v='nvim'
 alias vt="nvim -c terminal";
