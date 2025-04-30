@@ -1,11 +1,11 @@
 font:
     normal:
-        family: TerminessTTF Nerd Font Mono
+        family: Terminess Nerd Font Mono
         style: Regular
     bold:
-        family: TerminessTTF Nerd Font Mono
+        family: Terminess Nerd Font Mono
     italic:
-        family: TerminessTTF Nerd Font Mono
+        family: Terminess Nerd Font Mono
     size: 14
 
 colors:
