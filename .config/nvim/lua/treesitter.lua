@@ -4,6 +4,7 @@ require'nvim-treesitter.configs'.setup {
         'dockerfile',
         'fish',
         'gitignore',
+        'gleam',
         'html',
         'java',
         'json',

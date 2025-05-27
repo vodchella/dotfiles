@@ -1,4 +1,4 @@
-local map = vim.api.nvim_set_keymap
+local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = ' '
@@ -61,3 +61,29 @@ map('n', '<A-9>', '<Cmd>BufferGoto 9<CR>', opts)
 map('n', '<A-0>', '<Cmd>BufferLast<CR>', opts)
 -- Close current tab
 map('n', '<leader>q', '<Cmd>BufferClose<CR>', opts)
+
+-- Comments
+-- <C-/> обозначается в Lua как <C-_>.
+local comment_not_loaded = "Comment.nvim doesn't loadad, PackerSync will save you :)"
+map('n', '<C-_>', function()
+  local ok, api = pcall(require, 'Comment.api')
+  if not ok then
+    vim.notify(comment_not_loaded, vim.log.levels.WARN)
+    return
+  end
+  api.toggle.linewise.current()
+end, opts)
+map('v', '<C-_>', function()
+  local ok, api = pcall(require, 'Comment.api')
+  if not ok then
+    vim.notify(comment_not_loaded, vim.log.levels.WARN)
+    return
+  end
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<ESC>', true, false, true), 'nx', false)
+  api.toggle.linewise(vim.fn.visualmode())
+end, opts)
+
+-- Add cursor (visual multi)
+map('n', '<C-c>', function()
+  vim.cmd('call vm#commands#add_cursor_at_pos(0)')
+end, opts)

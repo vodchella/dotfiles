@@ -18,7 +18,13 @@ return require('packer').startup(function(use)
 
     -- Text editing
     use 'jiangmiao/auto-pairs'
-    use 'numToStr/Comment.nvim'
+    use 'mg979/vim-visual-multi'
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+          require('Comment').setup()
+        end
+    }
 
     -- Look and feel
     use 'machakann/vim-highlightedyank'
@@ -26,6 +32,9 @@ return require('packer').startup(function(use)
     use 'ap/vim-css-color'
     use 'lukas-reineke/indent-blankline.nvim'
     use 'kyazdani42/nvim-web-devicons'
+
+    use 'rcarriga/nvim-notify'
+    vim.notify = require("notify")
 
     -- Highlighting
     use 'nvim-treesitter/nvim-treesitter'
